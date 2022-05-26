@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using CreateILWithCSharp;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
@@ -48,6 +49,10 @@ if (type is null)
 
 
 type.InvokeMember(methodName, BindingFlags.Default | BindingFlags.InvokeMethod, null, null, null);
+
+
+//this is also Emit IL Directly..
+DirectIlCall.DirectCall();
 
 
 Console.ReadKey();
